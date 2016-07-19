@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./styles/normalize.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./styles/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body ng-controller="mainCtrl">
+    <main>
+
+        <header class='nav-bar-container'>
+            <div class="nav-link">
+                <img src="styles/images/20141111035502_Screen0logo.png" alt="logo" /> Whirlwind
+                    <br> Weather
+            </div>
+            <div class="nav-link"><a sref="">Today's Weather</a></div>
+            <div class="nav-link"><a sref="">5-Day Forecast</a></div>
+            <div class="nav-link"><a sref="">About</a></div>
+        </header>
+
+        <div class="fullscreen-bg">
+            <video loop muted autoplay poster="styles/Up/Snapshots/Up.jpg" class="fullscreen-bg__video">
+                <source src="styles/Up/WEBM/Up.webm" type="video/webm">
+                <source src="styles/Up/MP4/Up.mp4" type="video/mp4">
+                <source src="styles/Up/OGV/Up.ogv" type="video/ogg">
+            </video>
+        </div>
+
+        <section class="landing-page-container">
+            <div class="form">
+                <input type="text" ng-model="name" placeholder="Enter City/State Name">
+                <button class="main-CTA" ng-click="getWeather(name)"><img src="styles/images/1468804547_search.png" alt="Submit" /></button>
+            </div>
+            <div class="weatherInfo" id="hidden">
+                <div class="cityName">
+                  <p>{{ weather.name }}</p>
+                  <img src="" alt="" />
+                </div>
+                <div class="current">
+                    <p>{{ weather.main.temp | number: 0 }}°</p>
+                </div>
+                <div class="highLow">
+                    <p>H {{ weather.main.temp_max | number: 0 }}°/L {{ weather.main.temp_min | number: 0 }}°</p>
+                </div>
+                <div class="sunStatus">
+                    <p>Sunrise: {{ weather.sys.sunrise * 1000 | date: 'h:mm a' }}</p>
+                    <p>Sunset: {{ weather.sys.sunset * 1000 | date: 'h:mm a'  }}</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <footer></footer>
+        </section>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./scripts/animations.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+<script type="text/javascript" src="./scripts/weatherApp.js"></script>
+<script type="text/javascript" src="./scripts/controllers/mainCtrl.js"></script>
+<script type="text/javascript" src="./scripts/services/weatherService.js"></script>
+
+</html>

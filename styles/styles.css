@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic);
+.nav-bar-container {
+    height: 7vh;
+    width: 100%;
+    background-color: #000;
+    opacity: .7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+}
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link img {
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
+    float: left;
+    margin-right: 5px;
+}
+.nav-link a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav-link a:hover {
+    color: lightblue;
+    text-decoration: none;
+}
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('http://www.zoom-comics.com/wp-content/uploads/sites/36/2013/11/Deadpool-rides-Iron-Man.jpg') center center no-repeat;
+        background-size: cover;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+.landing-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    display: inline-block;
+    overflow: hidden;
+    border: none;
+    border-radius: 8px;
+    margin: 0;
+    height: 5vh;
+    margin-top: 17vh;
+}
+
+.form button:hover {
+  background: lightgreen;
+}
+.form input {
+    margin: 0;
+    height: 5vh;
+    float: left;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans';
+}
+.main-CTA {
+    background: none;
+    height: 5vh;
+    width: 30px;
+    align-items: center;
+    padding: 4px 2px 4px 2px;
+    outline: none;
+}
+.main-CTA img {
+    height: 15px;
+    width: 15px;
+    background: transparent;
+}
+.weatherInfo {
+    height: 50vh;
+    width: 30vw;
+    margin-top: 8vh;
+    line-height: 2;
+    background: none;
+    border-radius: 4px;
+}
+
+.weatherInfo p{
+  font-family: 'Open Sans';
+}
+
+.cityName {
+  font-size: 5vh;
+  text-align: left;
+  height: 25%;
+  text-align: center;
+  overflow: scroll;
+}
+
+.current {
+  font-size: 64px;
+  text-align: center;
+  height: 25%;
+  margin-top: -15px;
+}
+
+.highLow {
+  height: 25%;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 24px;
+}
+
+.sunStatus {
+  height: 25%;
+  text-align: center;
+  font-size: 24px;
+
+}
