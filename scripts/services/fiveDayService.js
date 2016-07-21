@@ -1,5 +1,5 @@
 angular.module('weatherApp')
-    .service('fiveDayService', function() {
+    .service('fiveDayService', function($http) {
 
 
 
