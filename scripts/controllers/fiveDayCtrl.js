@@ -1,8 +1,7 @@
 angular.module('weatherApp')
-    .controller('mainCtrl', function($scope, fiveDayService) {
+    .controller('fiveDayCtrl', function($scope, fiveDayService) {
 
-        $scope.getForecast = function(name) {
-            $scope.name = "";
+        $scope.getForecast = function() {
             fiveDayService.getForecast(name).then(function(myForecast) {
                 $scope.forecast = results;
 

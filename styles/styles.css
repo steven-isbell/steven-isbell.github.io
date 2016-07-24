@@ -183,3 +183,17 @@
   text-shadow: 1px 1px 2px #427388;
   opacity: .9;
 }
+
+.loading {
+  top: 30vh;
+  bottom: 50vh;
+  left: 35vw;
+  position: absolute;
+  background: url("https://24.media.tumblr.com/f678ce38eb896bc1d4aaa911958af087/tumblr_n2eccv6Dev1rgpzseo1_1280.gif");
+  height: 50vh;
+  width: 30vw;
+  z-index: 100;
+}
+
+.widget {
+}

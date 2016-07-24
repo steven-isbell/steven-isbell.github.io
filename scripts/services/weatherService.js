@@ -1,6 +1,5 @@
 angular.module('weatherApp')
-    .service('weatherService', function($http) {
-
+    .service('weatherService', function($http, $q) {
 
         this.getWeather = function(name) {
             return $http({
@@ -13,37 +12,41 @@ angular.module('weatherApp')
             });
         };
 
+        
 
-          if ("geolocation" in navigator) {
-              /* geolocation is available */
-          } else {
-              alert('Unable to access location');
+        this.getAPIWeather = function (position) {
+          var lat, lon;
+
+          lat = position.coords.latitude;
+          lon = position.coords.longitude;
+          return $http({
+              method: 'GET',
+              url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial&APPID=8d6d3d96f61b617556cbc73957e7ae65'
+          });
+        };
+
+
+        this.getLocation = function() {
+          var deferred = $q.defer();
+          function success(position) {
+              deferred.resolve(position);
           }
-
-
-        // this.locWeather = navigator.geolocation.getCurrentPosition(function(position) {
-        //   var lat = position.coords.latitude;
-        //   var lon = position.coords.longitude;
-        //   return $http({
-        //     method: 'GET',
-        //     url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial&APPID=8d6d3d96f61b617556cbc73957e7ae65'
-        //   }).then(function(response){
-        //     var immWeather = response.data;
-        //   });
-        //
-        //
-        //
-        //
-        //   });
+          navigator.geolocation.getCurrentPosition(success);
+          return deferred.promise;
+        };
 
 
 
-        this.backgroundVideos = [
-             'styles/videos/Up/MP4/Up.mp4',
-             'styles/videos/Rain - 78.mp4',
-             'styles/videos/343457132.mp4',
-             'styles/videos/CloseUp.mov'
-        ];
+
+
+        // this.backgroundVideos = [
+        //      'styles/videos/Up/MP4/Up.mp4',
+        //      'styles/videos/Rain - 78.mp4',
+        //      'styles/videos/343457132.mp4',
+        //      'styles/videos/CloseUp.mov'
+        // ];
+
+
 
 
 

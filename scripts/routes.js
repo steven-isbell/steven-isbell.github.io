@@ -7,7 +7,8 @@ angular.module('weatherApp')
     $stateProvider
     .state('Today\'s weather', {
         url: "/",
-        templateUrl: "index.html"
+        templateUrl: "scripts/templates/home.html",
+        controller: "mainCtrl"
       })
       .state('5-Day Forecast', {
         url: "/5-day-forecast",
