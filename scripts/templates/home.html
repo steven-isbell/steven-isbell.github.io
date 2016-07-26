@@ -1,17 +1,11 @@
-<!-- Video Background -->
-<!-- <div class="fullscreen-bg"> -->
-    <!-- <video loop muted autoplay poster="styles/images/13H.jpg" class="fullscreen-bg__video"> -->
-        <!-- <source src="styles/videos/Up/WEBM/Up.webm" type="video/webm">
-        <source src="styles/videos/Up/MP4/Up.mp4">
-        <source src="styles/videos/Up/OGV/Up.ogv" type="video/ogg"> -->
-    <!-- </video> -->
-<!-- </div> -->
-
 <section class="landing-page-container">
-    <div class="form">
-        <input type="text" ng-model="name" placeholder="Enter City/State Name">
-        <button class="main-CTA" ng-click="getWeather(name)"><img src="styles/images/1468804547_search.png" alt="Submit" /></button>
-    </div>
+  <div class="wrap">
+    <form action="" autocomplete="on">
+    <input ng-model="name" type="text" placeholder="Enter Location To Search">
+    <button id="search_submit" class="main-CTA" ng-click="getWeather(name)"><img src="http://www.fwnewman.org/images/Times/magnifying_glass.png" alt=""/></button>
+    </form>
+  </div>
+
     <div class="weatherInfo" id="hidden">
         <div class="cityName">
             <p>{{ curr.name }}</p>
@@ -19,7 +13,7 @@
         <div class="current">
             <p>{{ curr.main.temp | number: 0 }}°</p>
         </div>
-        <i class="owf owf-{{curr.weather[0].id}} owf-5x"></i>
+        <i class="owf owf-{{curr.weather[0].id}} owf-5x" id="owfIcon"></i>
         <div class="sunStatus">
             <p id="rise">Sunrise: {{ curr.sys.sunrise * 1000 | date: 'h:mm a' }}</p>
             <p id="fall">Sunset: {{ curr.sys.sunset * 1000 | date: 'h:mm a' }}</p>
@@ -36,7 +30,7 @@
         <div class="current">
             <p>{{ now.main.temp | number: 0 }}°</p>
         </div>
-        <i class="owf owf-{{now.weather[0].id}} owf-5x"></i>
+        <i class="owf owf-{{now.weather[0].id}} owf-5x" id="owfIcon"></i>
         <div class="sunStatus">
             <p id="rise">Sunrise: {{ now.sys.sunrise * 1000 | date: 'h:mm a' }}</p>
             <p id="fall">Sunset: {{ now.sys.sunset * 1000 | date: 'h:mm a' }}</p>

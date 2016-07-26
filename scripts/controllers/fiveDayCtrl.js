@@ -7,7 +7,7 @@ angular.module('weatherApp')
                 $scope.forecast = results.list;
                 console.log($scope.forecast);
                 if (!($scope.forecast)) {
-                    alert('Incorrect Input');
+                    alert('We can\'t find that city, try walking outside?');
                 }
 
             });
@@ -23,8 +23,9 @@ angular.module('weatherApp')
         $scope.currForecast = function() {
             fiveDayService.getLocation().then(function(response) {
                 fiveDayService.getAPIForecast(response).then(function(response) {
-                    $('.loading-forecast').fadeOut('fast');
+                    $('.loading').fadeOut('fast');
                     $scope.myFore = response.data.list;
+                    console.log($scope.myFore);
                 });
             });
         };

@@ -12,7 +12,7 @@
     <!-- Main Styling -->
     <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8">
     <!-- Weather Icons -->
-    <link rel="stylesheet" href="./styles/icons/owfont-master/css/owfont-regular.css" type="text/css">
+    <link rel="stylesheet" href="./styles/icons/owfont-master/css/owfont-regular.css" media="screen" title="no title" charset="utf-8">
 
     <base ui-sref="/">
 </head>
@@ -20,17 +20,11 @@
 <body>
     <main>
         <!-- Navigation Bar -->
-        <header class='nav-bar-container'>
-            <div class="nav-link" id="topLogo">
-                <img src="styles/images/20141111035502_Screen0logo.png" alt="logo" /> Whirlwind
-                <br> Weather
-            </div>
-            <div class="nav-link"><a ui-sref="Today's weather">Today's Weather</a></div>
-            <div class="nav-link"><a ui-sref="5-Day Forecast">7-Day Forecast</a></div>
-            <div class="nav-link"><a ui-sref="About">About</a></div>
-        </header>
+        <nav-dir></nav-dir>
 
+        <!-- Routes -->
         <ui-view jq-dir></ui-view>
+
     </main>
 </body>
 <!-- jQuery CDN -->
@@ -40,8 +34,9 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.js"></script>
 <!-- App -->
 <script type="text/javascript" src="./scripts/weatherApp.js"></script>
-<!-- jQuery Animation -->
+<!-- Directives -->
 <script type="text/javascript" src="./scripts/animations.js"></script>
+<script type="text/javascript" src="./scripts/navDirective.js"></script>
 <!-- Route Provider -->
 <script type="text/javascript" src="./scripts/routes.js"></script>
 <!-- Controllers -->
@@ -52,6 +47,5 @@
 <script type="text/javascript" src="./scripts/services/fiveDayService.js"></script>
 <!-- Font Awesome CDN -->
 <script src="https://use.fontawesome.com/e1a0e5007b.js"></script>
-
 
 </html>

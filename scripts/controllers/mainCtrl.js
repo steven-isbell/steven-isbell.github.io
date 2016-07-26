@@ -6,7 +6,7 @@ angular.module('weatherApp')
             weatherService.getWeather(name).then(function(results) {
                 $scope.curr = results;
                 if ($scope.curr.message === 'Error: Not found city') {
-                    alert('Incorrect Input');
+                    alert('We can\'t find that city, try walking outside?');
 
                 }
                 // if ($scope.curr.weather[0].main === 'Clouds') {

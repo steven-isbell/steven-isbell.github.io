@@ -1,12 +1,15 @@
 <section class="forecast-container">
-    <div class="form" id="five-day-form">
-        <input type="text" ng-model="name" placeholder="Enter City/State Name">
-        <button class="main-CTA" ng-click="getForecast(name)"><img src="styles/images/1468804547_search.png" alt="Submit" /></button>
-    </div>
+  <div id="form-wrap" class="wrap">
+    <form autocomplete="on">
+    <input ng-model="name" type="text" placeholder="Enter Location To Search">
+    <button id="search_submit" class="main-CTA" ng-click="getForecast(name)"><img src="http://www.fwnewman.org/images/Times/magnifying_glass.png" alt=""/></button>
+    </form>
+  </div>
+
         <div class="card-container" id="hidden">
             <div class="forecast-card" ng-repeat="day in forecast">
                 <p>{{day.dt * 1000 | date: 'longDate'}}</p>
-                <i class="owf owf-{{day.weather[0].id}} owf-3x" style="float: right"></i>
+                <i class="owf owf-{{day.weather[0].id}} owf-4x" style="float: right"></i>
                 <p id="desc">{{day.weather[0].description}}</p>
                 <div class="temp">
                     <p id="high">{{day.temp.max | number: 0}}°</p>
@@ -20,11 +23,10 @@
     <div class="currentWeather">
         <button class="flash-CTA" ng-click="currForecast()">My Local Forecast</button>
     </div>
-    <img class="loading-forecast" src="http://hulk-games.com/themes/happywheels_v2//resources/img/loading.gif" alt="" />
-    <div class="card-container" id="currHidden">
+<img class="loading" src="https://24.media.tumblr.com/f678ce38eb896bc1d4aaa911958af087/tumblr_n2eccv6Dev1rgpzseo1_1280.gif" alt="" />    <div class="card-container" id="currHidden">
         <div class="forecast-card" ng-repeat="day in myFore">
             <p>{{day.dt * 1000 | date: 'longDate'}}</p>
-            <i class="owf owf-{{day.weather[0].id}} owf-3x" style="float: right"></i>
+            <i class="owf owf-{{day.weather[0].id}} owf-4x" style="float: right"></i>
             <p id="desc">{{day.weather[0].description}}</p>
             <div class="temp">
                 <p id="high">{{day.temp.max | number: 0}}°</p>
