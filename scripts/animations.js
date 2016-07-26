@@ -2,7 +2,7 @@ angular.module('weatherApp')
     .directive('jqDir', function() {
         return {
             restrict: 'EA',
-            controller: "mainCtrl",
+            // controller: "mainCtrl",
             link: function(scope, element, attrs) {
                 $(document).ready(function() {
 
@@ -30,10 +30,16 @@ angular.module('weatherApp')
                         $('.flash-CTA').hide(); //find way so it can re-appear
                     });
 
+                    // Display's loading GIF
                     $('.loading').hide();
                     $('.flash-CTA').on('click', function() {
                         $('.loading').show();
                     });
+
+                    $('.loading-forecast').hide();
+                    $('.flash-CTA').on('click', function() {
+                        $('.loading-forecast').show();
+                    })
 
                 });
             }

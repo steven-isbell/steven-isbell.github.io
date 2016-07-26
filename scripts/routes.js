@@ -5,7 +5,7 @@ angular.module('weatherApp')
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
-    .state('Today\'s weather', {
+      .state('Today\'s weather', {
         url: "/",
         templateUrl: "scripts/templates/home.html",
         controller: "mainCtrl"

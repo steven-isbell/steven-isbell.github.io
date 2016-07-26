@@ -1,4 +1,63 @@
+<section class="forecast-container">
+    <div class="form" id="five-day-form">
+        <input type="text" ng-model="name" placeholder="Enter City/State Name">
+        <button class="main-CTA" ng-click="getForecast(name)"><img src="styles/images/1468804547_search.png" alt="Submit" /></button>
+    </div>
+        <div class="card-container" id="hidden">
+            <div class="forecast-card" ng-repeat="day in forecast">
+                <p>{{day.dt * 1000 | date: 'longDate'}}</p>
+                <i class="owf owf-{{day.weather[0].id}} owf-3x" style="float: right"></i>
+                <p id="desc">{{day.weather[0].description}}</p>
+                <div class="temp">
+                    <p id="high">{{day.temp.max | number: 0}}°</p>
+                    <p>/ </p>
+                    <p id="low">{{day.temp.min | number: 0}}°</p>
+                </div>
+                <p>Wind Speed: {{day.speed | number: 0}} mph</p>
+                <p>Humidity: {{day.humidity}}</p>
+            </div>
+        </div>
+    <div class="currentWeather">
+        <button class="flash-CTA" ng-click="currForecast()">My Local Forecast</button>
+    </div>
+    <img class="loading-forecast" src="http://hulk-games.com/themes/happywheels_v2//resources/img/loading.gif" alt="" />
+    <div class="card-container" id="currHidden">
+        <div class="forecast-card" ng-repeat="day in myFore">
+            <p>{{day.dt * 1000 | date: 'longDate'}}</p>
+            <i class="owf owf-{{day.weather[0].id}} owf-3x" style="float: right"></i>
+            <p id="desc">{{day.weather[0].description}}</p>
+            <div class="temp">
+                <p id="high">{{day.temp.max | number: 0}}°</p>
+                <p>/ </p>
+                <p id="low">{{day.temp.min | number: 0}}°</p>
+            </div>
+            <p>Wind Speed: {{day.speed | number: 0}} mph</p>
+            <p>Humidity: {{day.humidity}}</p>
+        </div>
+    </div>
+</section>
 
-<div class="widget">
+
+
+
+
+
+
+
+
+
+<!-- <div class="widget">
 <iframe src="https://embed.windyty.com/?45.070,-109.644,8,temp,menu,message,ip,metric.wind.mph,metric.temp.F" width="500" height="500" frameborder="0"></iframe>
-</div>
+</div> -->
+
+<!-- Maybe make 5dayForecast a carousel between the days?
+Or a side by side of 5 panels?
+Hamburger MEnu instead of header?
+Any way to incorporate parallax?
+Animated Icons from Spencer?
+Any other Animations to fit in?
+HEader or no for about page?
+finish styling about page?
+other links for social icons?
+Add one more directive, for reused HTML? The Weather Card HTML?
+make new route for just video and tag line? then have that slide up to display home weather page?-->
