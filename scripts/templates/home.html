@@ -13,7 +13,7 @@
         <div class="current">
             <p>{{ curr.main.temp | number: 0 }}°</p>
         </div>
-        <i class="owf owf-{{curr.weather[0].id}} owf-5x" id="owfIcon"></i>
+        <i class="wi wi-owm-{{curr.weather[0].id}}" id="wiIcon"></i>
         <div class="sunStatus">
             <p id="rise">Sunrise: {{ curr.sys.sunrise * 1000 | date: 'h:mm a' }}</p>
             <p id="fall">Sunset: {{ curr.sys.sunset * 1000 | date: 'h:mm a' }}</p>
@@ -30,7 +30,7 @@
         <div class="current">
             <p>{{ now.main.temp | number: 0 }}°</p>
         </div>
-        <i class="owf owf-{{now.weather[0].id}} owf-5x" id="owfIcon"></i>
+        <i class="wi wi-owm-{{now.weather[0].id}} wi-5x" id="wiIcon"></i>
         <div class="sunStatus">
             <p id="rise">Sunrise: {{ now.sys.sunrise * 1000 | date: 'h:mm a' }}</p>
             <p id="fall">Sunset: {{ now.sys.sunset * 1000 | date: 'h:mm a' }}</p>

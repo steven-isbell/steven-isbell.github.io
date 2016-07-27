@@ -9,8 +9,7 @@ angular.module('weatherApp')
                     alert('We can\'t find that city, try walking outside?');
 
                 }
-                // if ($scope.curr.weather[0].main === 'Clouds') {
-                //   $scope.video = weatherService.backgroundVideos[0];
+                
                 // } else if ($scope.curr.weather[0].main === "Rain") {
                 //   $scope.video = weatherService.backgroundVideos[1];
                 // } else if ($scope.curr.weather[0].main === "Snow") {

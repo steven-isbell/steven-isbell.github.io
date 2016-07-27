@@ -9,7 +9,7 @@
         <div class="card-container" id="hidden">
             <div class="forecast-card" ng-repeat="day in forecast">
                 <p>{{day.dt * 1000 | date: 'longDate'}}</p>
-                <i class="owf owf-{{day.weather[0].id}} owf-4x" style="float: right"></i>
+                <i class="wi wi-owm-{{day.weather[0].id}}" style="float: right"></i>
                 <p id="desc">{{day.weather[0].description}}</p>
                 <div class="temp">
                     <p id="high">{{day.temp.max | number: 0}}°</p>
@@ -17,7 +17,7 @@
                     <p id="low">{{day.temp.min | number: 0}}°</p>
                 </div>
                 <p>Wind Speed: {{day.speed | number: 0}} mph</p>
-                <p>Humidity: {{day.humidity}}</p>
+                <p>Humidity: {{day.humidity}}%</p>
             </div>
         </div>
     <div class="currentWeather">
@@ -26,7 +26,7 @@
 <img class="loading" src="https://24.media.tumblr.com/f678ce38eb896bc1d4aaa911958af087/tumblr_n2eccv6Dev1rgpzseo1_1280.gif" alt="" />    <div class="card-container" id="currHidden">
         <div class="forecast-card" ng-repeat="day in myFore">
             <p>{{day.dt * 1000 | date: 'longDate'}}</p>
-            <i class="owf owf-{{day.weather[0].id}} owf-4x" style="float: right"></i>
+            <i class="wi wi-owm-{{day.weather[0].id}}" style="float: right"></i>
             <p id="desc">{{day.weather[0].description}}</p>
             <div class="temp">
                 <p id="high">{{day.temp.max | number: 0}}°</p>
@@ -34,7 +34,7 @@
                 <p id="low">{{day.temp.min | number: 0}}°</p>
             </div>
             <p>Wind Speed: {{day.speed | number: 0}} mph</p>
-            <p>Humidity: {{day.humidity}}</p>
+            <p>Humidity: {{day.humidity}}%</p>
         </div>
     </div>
 </section>
