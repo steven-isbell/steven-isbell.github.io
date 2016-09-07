@@ -10,34 +10,34 @@
         transform: scale(.8);
     }
 }
-@keyframes moveFromTop {
+/*@keyframes moveFromTop {
     from {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
     }
-}
+}*/
 @keyframes scaleDown {
     to {
         opacity: 0;
         transform: scale(.8);
     }
 }
-@keyframes moveFromBottom {
+/*@keyframes moveFromBottom {
     from {
         -webkit-transform: translateY(100%);
         transform: translateY(100%);
     }
-}
+}*/
 @keyframes slideLeft {
     from {}
 }
-@keyframes moveToTop {
+/*@keyframes moveToTop {
     from {}
     to {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
     }
-}
+}*/
 
 /*NavBar*/
 
