@@ -237,7 +237,7 @@ input[type="submit"]:hover {
     height: 100vh;
     background: url("images/public-domain-images-free-stock-photos-002.jpg")center no-repeat;
     background-size: cover;
-    animation: moveFromTop .7s ease both;
+    /*animation: moveFromTop .7s ease both;*/
 }
 
 /*Home Page Search Weather*/
@@ -338,7 +338,7 @@ input[type="submit"]:hover {
     background: url("images/up-in-the-clouds.jpg")center no-repeat;
     background-size: cover;
     overflow: scroll;
-    animation: moveFromBottom .7s ease both;
+    /*animation: moveFromBottom .7s ease both;*/
 }
 
 /*Forecast Search*/
@@ -378,7 +378,7 @@ input[type="submit"]:hover {
 /*About Page*/
 
 .about-container {
-    animation: moveFromTop .7s ease both;
+    /*animation: moveFromTop .7s ease both;*/
     overflow: scroll;
 }
 .padding {
